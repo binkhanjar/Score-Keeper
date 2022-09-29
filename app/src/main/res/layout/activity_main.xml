@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stadium"
+            android:orientation="horizontal"
+            >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TableRow
+                    android:background="@color/colorTransparentB"
+                    android:padding="4dp">
+
+                    <ImageView
+                        style="@style/ImageViewStyle"
+                        android:src="@drawable/barca" />
+
+                    <TextView
+                        style="@style/TextViewsStyle"
+                        android:text="@string/score" />
+
+                    <ImageView
+                        style="@style/ImageViewStyle"
+                        android:src="@drawable/real" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/colorTransparentW"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/barca_goals_score"
+                        style="@style/TextViewsStyle"
+                        android:text="@string/scoreText" />
+
+                    <TextView
+                        style="@style/TextViewsStyle"
+                        android:text="@string/goals" />
+
+                    <TextView
+                        android:id="@+id/real_goals_score"
+                        style="@style/TextViewsStyle"
+                        android:text="@string/scoreText" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/colorTransparentB"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/barca_fouls_score"
+                        style="@style/TextViewsStyle"
+                        android:text="@string/scoreText" />
+
+                    <TextView
+                        style="@style/TextViewsStyle"
+                        android:text="@string/fouls" />
+
+                    <TextView
+                        android:id="@+id/real_fouls_score"
+                        style="@style/TextViewsStyle"
+                        android:text="@string/scoreText" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/colorTransparentW"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/barca_corners_score"
+                        style="@style/TextViewsStyle"
+                        android:text="@string/scoreText" />
+
+                    <TextView
+                        style="@style/TextViewsStyle"
+                        android:text="@string/corners" />
+
+                    <TextView
+                        android:id="@+id/real_corners_score"
+                        style="@style/TextViewsStyle"
+                        android:text="@string/scoreText" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/colorTransparentB"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/barca_offSides_score"
+                        style="@style/TextViewsStyle"
+                        android:text="@string/scoreText" />
+
+                    <TextView
+                        style="@style/TextViewsStyle"
+                        android:text="@string/offsides" />
+
+                    <TextView
+                        android:id="@+id/real_offSides_score"
+                        style="@style/TextViewsStyle"
+                        android:text="@string/scoreText" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/colorTransparentW"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/barca_yellowCars_score"
+                        style="@style/TextViewsStyle"
+                        android:text="@string/scoreText" />
+
+                    <TextView
+                        style="@style/TextViewsStyle"
+                        android:text="@string/yellow" />
+
+                    <TextView
+                        android:id="@+id/real_yellowCars_score"
+                        style="@style/TextViewsStyle"
+                        android:text="@string/scoreText" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/colorTransparentB"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/barca_redCars_score"
+                        style="@style/TextViewsStyle"
+                        android:text="@string/scoreText" />
+
+                    <TextView
+                        style="@style/TextViewsStyle"
+                        android:text="@string/redCards" />
+
+                    <TextView
+                        android:id="@+id/real_redCars_score"
+                        style="@style/TextViewsStyle"
+                        android:text="@string/scoreText" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button_barca_goal"
+                    style="@style/ButtonStyle"
+                    android:onClick="goalForBarca"
+                    android:text="@string/goals" />
+
+                <Button
+                    android:id="@+id/button_barca_foul"
+                    style="@style/ButtonStyle"
+                    android:onClick="foulForBarca"
+                    android:text="@string/fouls" />
+
+                <Button
+                    android:id="@+id/button_barca_corner"
+                    style="@style/ButtonStyle"
+                    android:onClick="cornerForBarca"
+                    android:text="@string/corners" />
+
+                <Button
+                    android:id="@+id/button_barca_offside"
+                    style="@style/ButtonStyle"
+                    android:onClick="offSideForBarca"
+                    android:text="@string/offsides" />
+
+                <Button
+                    android:id="@+id/button_barca_yCard"
+                    style="@style/ButtonStyle"
+                    android:onClick="yellowCardForBarca"
+                    android:text="@string/yellow" />
+
+                <Button
+                    android:id="@+id/button_barca_rCard"
+                    style="@style/ButtonStyle"
+                    android:onClick="redCardForBarca"
+                    android:text="@string/redCards" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button_real_goal"
+                    style="@style/ButtonStyle2"
+                    android:onClick="goalForReal"
+                    android:text="@string/goals" />
+
+                <Button
+                    android:id="@+id/button_real_foul"
+                    style="@style/ButtonStyle2"
+                    android:onClick="foulForReal"
+                    android:text="@string/fouls" />
+
+                <Button
+                    android:id="@+id/button_real_corner"
+                    style="@style/ButtonStyle2"
+                    android:onClick="cornerForReal"
+                    android:text="@string/corners" />
+
+                <Button
+                    android:id="@+id/button_real_offside"
+                    style="@style/ButtonStyle2"
+                    android:onClick="offSideForReal"
+                    android:text="@string/offsides" />
+
+                <Button
+                    android:id="@+id/button_real_yCard"
+                    style="@style/ButtonStyle2"
+                    android:onClick="yellowCardForReal"
+                    android:text="@string/yellow" />
+
+                <Button
+                    android:id="@+id/button_real_rCard"
+                    style="@style/ButtonStyle2"
+                    android:onClick="redCardForReal"
+                    android:text="@string/redCards" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        style="@style/ResetButton"
+        android:onClick="resetScore"
+        android:text="@string/reset" />
+
+</RelativeLayout>
+
